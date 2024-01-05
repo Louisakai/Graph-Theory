@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+#include <vector>
+using namespace std;
+
+#define Max_N 100
+
+//cau truc do thi su dung vecto
+typedef struct{
+	int n;
+	vector<int> adj[Max_N];
+}Graph;
+
+//ham khoi tao
+void init_graph(Graph *pG, int n){
+	pG->n=n;
+	int u;
+	for(u=1;u<=n;u++){
+		pG->adj[u].clear();
+	}
+}
